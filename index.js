@@ -18,10 +18,6 @@ try {
     const dir = fs.readdirSync("./")
     console.log("dir is",dir);
 
-    const myToken = await core.getIDToken();
-    console.log("myToken is", myToken);
-
-    const octokit = github.getOctokit(myToken)
 
     // Get the JSON webhook payload for the event that triggered the workflow
     const payload = JSON.stringify(github.context.payload, undefined, 2)
