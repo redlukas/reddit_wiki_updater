@@ -1,0 +1,25 @@
+name: 'Reddit Wiki updater'
+description: 'Designed to run on push. Takes the contents of a Repo and pushes it onto Reddit.'
+inputs:
+  sub_name:  # id of input
+    description: 'Name of the Subreddit onto which to push'
+    required: true
+    default: ''
+  reddit_client_id:
+    description: "the client ID of the App you made on reddit to automate the push"
+    required: true
+  reddit_client_secret:
+    description: "the secret belonging to the client ID"
+    required: true
+  reddit_user_name:
+    description: "the name of the user doing the push"
+    required: true
+  reddit_user_password:
+    required: true
+    description: "the password of the user doing the push"
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'index.js
